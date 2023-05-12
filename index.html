@@ -12,7 +12,7 @@
     태그는 기본적으로 여는태그와 닫는 태그가 있다.
     ex)
     여는 태그 : <html>
-    닫는 태그 : <html>
+    닫는 태그 : </html>
 -->
 
 <!-- 홈페이지를 설정 -->
@@ -53,13 +53,43 @@
         <li>삼겹살</li>
     </ol>
 
+    <!-- 행<tr>을 먼저 만들고 열<th>,<td>을 만든다. -->
+    <table>
+        <!--1행-->
+        <tr>
+            <!-- <th> 본문을 설명해주는 셀 -->
+            <th>이름</th>
+            <th>주소</th>
+            <th>종류</th>
+        </tr>
+        <!--2행-->
+        <tr>
+            <!-- <td> 본문(내용물)에 해당하는 셀 -->
+            <td>네이버</td>
+            <td>www.naver.com</td>
+            <td>포탈</td>
+        </tr>
+        <!--3행-->
+        <tr>
+            <td>다음</td>
+            <td>www.daum.net</td>
+            <td>포탈</td>
+        </tr>
+        <!--4행-->
+        <tr>
+            <td>나무위키</td>
+            <td>http://namu.wiki</td>
+            <td>위키백과</td>
+        </tr>
+    </table>
+
     <h2>내가 자주가는 사이트</h2>
     <ul>
         <!-- <a> : 다른 곳으로 들어가기 위한 링크를 생성 -->
-        <!-- href : 링크와 연결된 주소 (url)-->
+        <!-- href(속성) : 링크와 연결된 주소 (url)-->
         <!-- target : 링크가 열리는 위치,
             속성값을 _blank로 하면 생창에서 열기 아무것도 안치면 현재창에서 열기-->
-        <li><a href = "https://www.naver.com" target="_blank">네이버</a></li>
+        <li><a href = "https://www.naver.com" target="_blank">네이버</a></li> 
         <li>나무위키</li>
         <li>깃허브</li>
     </ul>
