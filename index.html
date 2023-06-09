@@ -47,6 +47,22 @@
             /* .food{
                 color: darkgreen;
             } */
+
+            table{
+                /* 테이블의 셀 사이의 경계를 한 줄로 */
+                /* collapse : 열을 병합 */
+                /* 셀 사이의 경계를 한 줄로 */
+                border-collapse: collapse; 
+                /* 수평적 가운데 위치 */
+                margin: auto; 
+            }
+            td,th{
+                /* 경계선 */
+                border: 1px solid black;
+                padding: 10px;
+                /* 글자 가운데 정렬 */
+                text-align: center;
+            }
         </style>
 </head>
 
@@ -97,21 +113,26 @@
         <!--2행-->
         <tr>
             <!-- <td> 본문(내용물)에 해당하는 셀 -->
+                <!-- rowspan : 행을 병합 -->
             <td>네이버</td>
             <td>www.naver.com</td>
-            <td>포탈</td>
+            <td rowspan="2">포탈</td>
         </tr>
         <!--3행-->
         <tr>
             <td>다음</td>
             <td>www.daum.net</td>
-            <td>포탈</td>
+            <!-- 위의 rowspan에 의해 td는  -->
         </tr>
         <!--4행-->
         <tr>
             <td>나무위키</td>
             <td>http://namu.wiki</td>
             <td>위키백과</td>
+        </tr>
+        <tr>
+            <td>자료제공</td>
+            <td colspan="2">JWP</td>
         </tr>
     </table>
 
