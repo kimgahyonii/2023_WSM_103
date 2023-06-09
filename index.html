@@ -53,7 +53,7 @@
                 /* collapse : 열을 병합 */
                 /* 셀 사이의 경계를 한 줄로 */
                 border-collapse: collapse; 
-                /* 수평적 가운데 위치 */
+                /* 수평적 가운데 배치 */
                 margin: auto; 
             }
             td,th{
@@ -105,38 +105,50 @@
     <table>
         <!-- 테이블 제목 -->
         <caption>내가 자주가는 사이트</caption>
+
+        <thead>
+            <!--1행-->
+            <tr>
+                <!-- <th> 본문을 설명해주는 셀 -->
+                <th>이름</th> 
+                <th>주소</th>
+                <th>종류</th>
+            </tr>
+        </thead>
         
-        <!--1행-->
-        <tr>
-            <!-- <th> 본문을 설명해주는 셀 -->
-            <th>이름</th> 
-            <th>주소</th>
-            <th>종류</th>
-        </tr>
-        <!--2행-->
-        <tr>
-            <!-- <td> 본문(내용물)에 해당하는 셀 -->
-                <!-- rowspan : 행을 병합 -->
-            <td>네이버</td>
-            <td>www.naver.com</td>
-            <td rowspan="2">포탈</td>
-        </tr>
-        <!--3행-->
-        <tr>
-            <td>다음</td>
-            <td>www.daum.net</td>
-            <!-- 위의 rowspan에 의해 td는  -->
-        </tr>
-        <!--4행-->
-        <tr>
-            <td>나무위키</td>
-            <td>http://namu.wiki</td>
-            <td>위키백과</td>
-        </tr>
-        <tr>
-            <td>자료제공</td>
-            <td colspan="2">JWP</td>
-        </tr>
+        <tbody>
+            <!--2행-->
+            <tr>
+                <!-- <td> 본문(내용물)에 해당하는 셀 -->
+                    <!-- rowspan : 행을 병합 -->
+                <td>네이버</td>
+                <td>www.naver.com</td>
+                <td rowspan="2">포탈</td>
+            </tr>
+        
+            <!--3행-->
+            <tr>
+                <td>다음</td>
+                <td>www.daum.net</td>
+                <!-- 위의 rowspan에 의해 td는  -->
+            </tr>
+
+            <!--4행-->
+            <tr>
+                <td>나무위키</td>
+                <td>http://namu.wiki</td>
+                <td>위키백과</td>
+            </tr>
+
+        </tbody>
+
+        <tfoot>
+            <tr>
+                <td>자료제공</td>
+                <td colspan="2">JWP</td>
+            </tr>
+        </tfoot>
+        
     </table>
 
     <!-- <h2>내가 자주가는 사이트</h2> -->
