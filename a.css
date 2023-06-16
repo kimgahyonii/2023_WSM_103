@@ -1,3 +1,17 @@
+/* 전체선택자 우선순위가 가장 낮음*/
+*{
+    color: salmon;
+}
+
+/* 태그 선택자 */
 div{
-    color : yellowgreen;
+    color : sandybrown;
+}
+/* 클래스 선택자 */
+.fd{
+    color :seagreen;
+}
+/*id선택자 */
+#s{
+    color: steelblue;
 }
