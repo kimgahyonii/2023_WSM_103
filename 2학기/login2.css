@@ -1,0 +1,101 @@
+#signup-form{
+    display: none;
+}
+* {
+    margin: 0;
+    padding: 0;   
+    /* 600
+        500
+    50      50 */
+    /* border-box :  width값이 박스 전체의 너비가 됨 */
+    box-sizing: border-box;
+}
+
+body{
+    background-color: #222;
+    /*box의 수직정렬을 제대로 하기 위해  */
+
+    /* 높이를 뷰의 100%만큼 */
+    height: 100vh; 
+
+    display: flex;
+    /* 주 방향을 가운데로 정렬 (왼 ~ 오) */
+    justify-content: center;
+    
+    /* 부 방향을 가운데로 정렬 */
+    align-items: center; 
+    
+}
+
+
+.form-container{
+    width: 600px;
+    /* margin: 0 auto; */
+    padding: 50px;
+    background-color: #333;
+    /* 시험 x */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    border-radius: 10px;
+    color: #cdc2c2;
+}
+
+h1{
+    /* 박스 안에 글자를 가운데 정렬 */
+    text-align: center;
+    margin-bottom: 30px;
+    font-size: 50px;
+    font-style: italic;
+    color: #3b7cc5;
+}
+
+form{
+    display: flex;
+    /* column으로 하면 아래쪽으로 바뀜 */
+    /* 자식의 정렬 방향을 열(위에서 아래) */
+    flex-direction: column;
+
+}
+
+label{
+    margin-bottom: 10px;
+    font-size: 20px;
+    /* font-style: italic; */
+}
+
+input{
+    padding: 12px;
+    margin-bottom: 20px;
+    font-size: 16px;
+    background-color: #555;
+    color: #ffffff;
+    border: none;
+    border-radius: 5px;
+}
+
+button{
+    /* 버튼 공간 넓히기 */
+    padding: 10px;
+    background-color: #5278a3;
+    border: none;
+    border-radius: 5px;
+    font-size: 20px;
+    cursor: pointer;
+
+    /* 이벤트가 발생했을 때, 스타일의 변화를 자연스럽게*/
+    transition:background 00.3s ease-in-out
+}
+
+button:hover{
+    background-color: #3b7cc5;
+}
+
+p{
+    text-align: center;
+    margin: 8px;
+}
+
+a{
+    text-decoration: none;
+    color: #1c469f;
+    font-size: 20px;
+}
