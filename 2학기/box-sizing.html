@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>box-sizing</title>
+        <style>
+            /* top - right - bottom - left (padding, margin) */
+            /* top-left - top-right - bottomm-right - bottom-left (border-radius) */
+            div{
+
+                /* 너비 */
+                width: 200px;
+                /* 높이 */
+                height: 100px;
+                /* 테두리 */
+                border: 2px black solid;
+                /* content-box(기본값)의 경우 박스의 폭은 width + 양옆padding + 양엽border*/
+                /* border-box의 경우 박스의 폭은 width라 함 */
+                /* width = 200 */
+                box-sizing: content-box;
+                /* border box는 자체가 200 */
+                /* content가 200이었슴 */
+            }
+            .a{
+                padding: 20px;
+                /*너비 :  20 * 200 + 1 * 2 */
+            }
+
+            .b{
+                padding-left: 20px;
+                /* 20 + 200 + 1 * 2 */
+                margin-bottom: 40px;
+            }
+        </style>
+    </head>
+    <body>
+        <!-- .은 클래스 선택자 -->
+        <div class="a"></div>
+        <div class="b"></div>
+        <div class="c"></div>
+        
+    </body>
+</html>
