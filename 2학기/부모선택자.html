@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>부모선택자</title>
+        <style>
+            /* >가 대소비교가 아닌 a의 자식 b라는 뜻 */
+            /* 부모인 a에게 적용됨 */
+
+            /* 부모(b)는 조부모(a)의 직계자식이라 적용됨 */
+            .a >.b {
+                border: 1px green solid;
+                /* 부모 한테 margin적용 */
+                margin-top: 10px;
+            }
+
+            /* 자식(c)은 조부모(a)의 직계자식이 아니라 적용되지 않음 */
+            .a > .c{
+                /* 직계자식인 b만 가능 */
+                margin-top: 10px;
+            }
+            
+            /* 자식(c)는 조부모(a) 자식의 자식이라 적용 */
+            /* 직계자식이 아닌경우 > 사용 안하고 표현 */
+            .a .c{
+                border: 1px red solid;
+                margin-left: 30px;
+            }
+        </style>
+    </head>
+    <body>
+        <!-- b가 c를 감싸고 있고 a가 b를 감싸고 있다 -->
+        <!-- 이를 부모 자식 관계라고 함 -->
+        <!-- a는 b의 부모이고 c는 b의 자식 -->
+
+        <div class="a">조부모
+            <div class="b">부모
+                <div class="c">자식</div>
+            </div>
+        </div>
+    </body>
+</html>
